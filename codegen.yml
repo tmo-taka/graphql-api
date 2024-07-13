@@ -1,0 +1,10 @@
+schema:
+    https://${PRISMIC_REPOSITORY_NAME}.prismic.io/graphql:
+        customFetch: "codegen-prismic-fetch"
+        headers:
+            Authorization: Token ${PRISMIC_TOKEN}
+
+generates:
+    ./types/graphql.ts:
+        plugins:
+            - typescript
